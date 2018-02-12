@@ -138,7 +138,8 @@ p, ul, li, h2, h3, h4 {
 
 header h1 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: #1f1f1e; }
 
 h2 {
   text-transform: uppercase; }
@@ -156,14 +157,17 @@ button:hover {
 input {
   background-color: #c4c5c3;
   max-width: 100px;
-  border: none; }
+  border: none;
+  margin: 5px auto;
+  padding: 5px; }
 
 .showspin span {
   background-color: #c4c5c3;
   border-color: #91938f; }
 
 select {
-  background-color: #c4c5c3; }
+  background-color: #c4c5c3;
+  margin: 5px auto; }
 
 nav {
   width: 100%;
@@ -171,6 +175,12 @@ nav {
   position: fixed;
   z-index: 10;
   padding: 5px 0px; }
+
+footer {
+  width: 100%;
+  background-color: #1f1f1e;
+  padding: 5px 0px;
+  text-align: center; }
 
 nav a {
   text-decoration: none;
@@ -190,6 +200,9 @@ nav li {
 
 nav li:hover {
   background-color: #5e605d; }
+
+form {
+  color: #1f1f1e; }
 
 .mainwrap {
   margin: 0 auto;
@@ -231,10 +244,12 @@ nav li:hover {
 
 body {
   background-color: #383937;
+  background-image: url("round.png");
   font-size: 16px;
   font-family: 'Roboto',sans-serif;
   color: #DBE4CA;
-  position: relative; }
+  position: relative;
+  letter-spacing: .1rem; }
 
 header {
   color: #DBE4CA; }
@@ -254,7 +269,7 @@ header {
 .grid {
   display: grid;
   grid-auto-rows: minmax(70px, auto);
-  grid-template-areas: " . . . . . . . ." ". title title title  . . . ." "intro intro intro intro intro intro intro intro" "start start start start start start start start" "start start start start start start start start" " . . . . . . . ." "global global global global global global global global" " . . . . . . . ."; }
+  grid-template-areas: " . . . . . . . ." ". . title title  . . . ." ". intro intro intro intro intro intro intro" "start start start start start start start start" "start start start start start start start start" " . . . . . . . ." "global global global global global global global global" " . . . . . . . ."; }
 
 .headtitle {
   grid-area: title; }
@@ -317,20 +332,23 @@ header {
     transform: rotate(0turn); } }
 
 .intro {
-  grid-area: intro; }
+  grid-area: intro;
+  margin-left: 50px;
+  width: 80%;
+  color: #1f1f1e; }
 
 .firstchoice {
   grid-area: start; }
 
 .firstchoice h4 {
   font-size: 1.5rem;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  color: #1f1f1e; }
 
 .galleryItem h3 {
   font-size: 1rem; }
 
 .examplebox {
-  margin: 2px;
   text-align: center;
   color: #DBE4CA; }
 
@@ -405,13 +423,13 @@ header {
   grid-area: form;
   height: 100%; }
 
+#boxform button {
+  margin-bottom: 15px; }
+
 #globform {
   grid-area: global; }
 
 #globform .flex {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -426,7 +444,7 @@ header {
   float: left; }
 
 #globalstyles {
-  width: 100%; }
+  width: 70%; }
 
 #globalstyles h3 {
   margin: 15px 0px;
@@ -442,6 +460,9 @@ header {
   align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around; }
+
+#globalstyles .flex div {
+  max-height: 200px; }
 
 #globform button {
   margin-top: 50px; }
@@ -489,7 +510,7 @@ aside span {
   border: 5px black solid; }
 
 .galleryItem .solidb {
-  border: 1px black solid; }
+  border: none; }
 
 .dottedb {
   border: 5px black dotted; }
@@ -534,14 +555,24 @@ aside span {
   grid-template-areas: "header header header box1 box1" "box2 box2 box2 box1 box1" "box2 box2 box2 box3 box3" "box4 box4 box4 box3 box3" "box4 box4 box4 box3 box3" "box5 box5 box5 box6 box6" "box5 box5 box5 box6 box6" "box7 box7 box7 box6 box6" "box7 box7 box7 box8 box8" "box7 box7 box7 box8 box8";
   visibility: visible; }
 
-.font1 {
+.font1, .tfont1 {
   font-family: 'Rammetto One', cursive; }
 
-.font2 {
+.font2,
+.tfont2 {
   font-family: 'Anton',sans-serif; }
 
-.font3 {
+.font3,
+.tfont3 {
   font-family: 'Berkshire Swash',cursive; }
+
+.font4,
+.tfont4 {
+  font-family: 'roboto', sans-serif; }
+
+.font5,
+.tfont5 {
+  font-family: 'Kavivanar', cursive; }
 
 .size1 {
   font-size: .75rem; }
@@ -553,6 +584,7 @@ aside span {
   font-size: 1.25rem; }
 
 .contentbox {
+  position: relative;
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;

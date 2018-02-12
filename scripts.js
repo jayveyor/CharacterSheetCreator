@@ -133,6 +133,10 @@ $(function () {
         $("#sheet .sheettitle").removeClass(`tcenter tleft tright tspace`);
         $("#sheet .sheettitle").addClass(` ${sheetTStyle}`);
 
+        const tfont = $("select[name='tfont']").val();
+        $("#sheet .sheettitle").removeClass(`tfont1 tfont2 tfont3`);
+        $("#sheet .sheettitle").addClass(` ${tfont}`);
+
         const border = $("select[name='border']").val();
         $("#sheet").removeClass(`solidb dottedb doubleb`);
         $("#sheet").addClass(` ${border}`);
